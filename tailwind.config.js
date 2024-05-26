@@ -22,6 +22,7 @@ module.exports = {
       "sm": { "max": "425px" },
       "xs": { "max": "375px" },
       "xxs": { "max": "320px" },
+      "hover-hover": { "raw": "(hover: hover)" },
     },
     container: {
       center: false,
@@ -30,7 +31,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      "sans": ["Inter", "sans-serif"],
+      "sans": ["Montserrat", "sans-serif"],
     },
     colors: {
       "black": "#000",
@@ -39,7 +40,7 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        mw: "1566px",
+        mw: "1230px",
       }
     },
   },
