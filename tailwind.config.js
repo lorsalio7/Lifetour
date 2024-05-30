@@ -35,17 +35,24 @@ module.exports = {
     },
     colors: {
       "black": "#000",
+      "black-0": "#00000000",
       "white": "#fff",
-      transparent: "transparent",
+      "transparent": "transparent",
       "science-blue": "#0266c1",
       "science-blue-40": "#0266c166",
       "black-squeeze": "#f5f9fc",
       "endeavour": "#00539e",
+      "outer-space": "#2d383f",
     },
     extend: {
       maxWidth: {
         mw: "1230px",
-      }
+      },
+      backgroundImage: {
+        "link-arrow": "url('/img/small-right-arrow-ic.svg')",
+        "tour-bg": "url('/img/tour-bg.png')",
+        "small-cloud": "url('/img/small-cloud-decor.png')",
+      },
     },
   },
   plugins: [],
