@@ -1,16 +1,28 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function (e) {
-    var offsetTop = window.scrollY;
-    document.documentElement.style.setProperty('--scrollTop', "".concat(offsetTop, "px"));
-    if (offsetTop > 0) {
-      document.querySelector(".main-header").classList.add("py-4", "bg-science-blue");
-    } else {
-      document.querySelector(".main-header").classList.remove("py-4", "bg-science-blue");
+  /*window.addEventListener("scroll", (e) => {
+  let offsetTop = window.scrollY;
+  document.documentElement.style.setProperty('--scrollTop', `${offsetTop}px`);
+   if(offsetTop > 0) {
+    document.querySelector(".main-header").classList.add("py-4", "bg-science-blue");
+  } else {
+    document.querySelector(".main-header").classList.remove("py-4", "bg-science-blue");
+  }
+  })
+  ;*/
+  function checkVisibleSlides(slides, visibleClass, additionalClass) {
+    for (var i = 0; i < slides.length; i++) {
+      if (!slides[i].classList.contains(visibleClass)) {
+        slides[i].classList.add(additionalClass);
+      } else {
+        slides[i].classList.remove(additionalClass);
+      }
     }
-  });
+  }
+  ;
   var toursSlider = document.querySelector(".tours-slider");
+  var trainersSlider = document.querySelector(".trainers-slider");
   if (toursSlider) {
     var toursSliderNextButton = document.querySelector(".tours-slider-next-button");
     var toursSliderPrevButton = document.querySelector(".tours-slider-prev-button");
@@ -28,6 +40,30 @@ window.addEventListener("DOMContentLoaded", function () {
     });
     toursSliderPrevButton.addEventListener("click", function () {
       toursSlider.go("-1");
+    });
+  }
+  if (trainersSlider) {
+    var trainersSliderNextButton = document.querySelector(".trainers-slider-next-button");
+    var trainersSliderPrevButton = document.querySelector(".trainers-slider-prev-button");
+    trainersSlider = new Splide(trainersSlider, {
+      speed: 500,
+      arrows: false,
+      pagination: false,
+      gap: 20,
+      perPage: 5,
+      rewind: true
+    });
+    trainersSlider.mount();
+    trainersSliderNextButton.addEventListener("click", function () {
+      trainersSlider.go("+1");
+    });
+    trainersSliderPrevButton.addEventListener("click", function () {
+      trainersSlider.go("-1");
+    });
+    var trainersSlides = document.querySelectorAll(".trainers-slider .splide__slide");
+    checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
+    trainersSlider.on("moved", function () {
+      checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
     });
   }
   ;

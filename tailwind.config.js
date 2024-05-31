@@ -43,6 +43,7 @@ module.exports = {
       "black-squeeze": "#f5f9fc",
       "endeavour": "#00539e",
       "outer-space": "#2d383f",
+      "mystic": "#d9e7ea",
     },
     extend: {
       maxWidth: {
@@ -53,6 +54,9 @@ module.exports = {
         "tour-bg": "url('/img/tour-bg.png')",
         "small-cloud": "url('/img/small-cloud-decor.png')",
       },
+      boxShadow: {
+        "slides-shadow": "0 0 25px #0000000a",
+      }
     },
   },
   plugins: [],
