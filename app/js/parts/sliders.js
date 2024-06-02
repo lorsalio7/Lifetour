@@ -1,5 +1,6 @@
 let toursSlider = document.querySelector(".tours-slider");
 let trainersSlider = document.querySelector(".trainers-slider");
+let reviewsSlider = document.querySelector(".reviews-slider");
 
 if(toursSlider) {
   let toursSliderNextButton = document.querySelector(".tours-slider-next-button");
@@ -45,8 +46,38 @@ if(trainersSlider) {
 
   let trainersSlides = document.querySelectorAll(".trainers-slider .splide__slide");
 
-  checkVisibleSlides(trainersSlides, "is-visible", "opacity-0")
+  checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
   trainersSlider.on("moved", () => {
     checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
-  })
+  });
+}
+
+if(reviewsSlider) {
+  let reviewsSliderNextButton = document.querySelector(".reviews-slider-next-button");
+  let reviewsSliderPrevButton = document.querySelector(".reviews-slider-prev-button");
+
+  reviewsSlider = new Splide(reviewsSlider, {
+    speed    : 500,
+    arrows   : false,
+    pagination: false,
+    gap: 15,
+    perPage: 3,
+    rewind: true
+  });
+
+  reviewsSlider.mount();
+
+  reviewsSliderNextButton.addEventListener("click", () => {
+    reviewsSlider.go("+1");
+  });
+  reviewsSliderPrevButton.addEventListener("click", () => {
+    reviewsSlider.go("-1");
+  });
+
+  let reviewsSlides = document.querySelectorAll(".reviews-slider .splide__slide");
+
+  checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
+  reviewsSlider.on("moved", () => {
+    checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
+  });
 }

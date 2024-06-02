@@ -41,3 +41,41 @@
   font-style: normal;
   font-display: swap;
 }
+
+.reviews-text p {
+  position: relative;
+  z-index: 10;
+}
+
+.reviews-text p:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  width: 30px;
+  height: 21px;
+  background-image: url("../img/quotes-start-ic.svg");
+  background-size: 30px 21px;
+  background-repeat: no-repeat;
+}
+
+.reviews-text p:last-of-type {
+  padding-bottom: 10px;
+}
+
+.reviews-text p:last-of-type::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  margin-left: -26px;
+  width: 30px;
+  height: 21px;
+  line-height: 21px;
+  background-image: url("../img/quotes-end-ic.svg");
+  background-size: 30px 21px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.reviews-text p:not(:last-of-type) {
+  margin-bottom: 22px;
+}
