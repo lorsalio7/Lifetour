@@ -44,6 +44,7 @@ module.exports = {
       "black-squeeze": "#f5f9fc",
       "endeavour": "#00539e",
       "outer-space": "#2d383f",
+      "outer-space-40": "#2d383f66",
       "mystic": "#d9e7ea",
       "silver-chalice": "#b0b0b0",
     },

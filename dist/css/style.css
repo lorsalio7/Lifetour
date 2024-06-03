@@ -737,6 +737,15 @@ video {
 .mr-\[6px\] {
   margin-right: 6px;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
 .block {
   display: block;
 }
@@ -786,6 +795,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-7 {
+  height: 1.75rem;
+}
 .min-h-\[412px\] {
   min-height: 412px;
 }
@@ -818,6 +830,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-7 {
+  width: 1.75rem;
 }
 .max-w-\[490px\] {
   max-width: 490px;
@@ -887,6 +902,11 @@ video {
       -ms-flex-align: center;
           align-items: center;
 }
+.items-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
 .justify-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -921,6 +941,9 @@ video {
 }
 .border-solid {
   border-style: solid;
+}
+.border-outer-space-40 {
+  border-color: #2d383f66;
 }
 .border-science-blue-11 {
   border-color: #0266c11c;
@@ -959,6 +982,9 @@ video {
 }
 .fill-black {
   fill: #000;
+}
+.fill-outer-space {
+  fill: #2d383f;
 }
 .fill-white {
   fill: #fff;
@@ -1028,6 +1054,10 @@ video {
   padding-top: 18px;
   padding-bottom: 18px;
 }
+.py-\[19px\] {
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1036,9 +1066,17 @@ video {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.py-\[19px\] {
-  padding-top: 19px;
-  padding-bottom: 19px;
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.py-\[22px\] {
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
@@ -1048,6 +1086,21 @@ video {
 }
 .pr-\[21px\] {
   padding-right: 21px;
+}
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+.pt-\[22px\] {
+  padding-top: 22px;
+}
+.pb-12 {
+  padding-bottom: 3rem;
+}
+.pb-11 {
+  padding-bottom: 2.75rem;
+}
+.pb-\[46px\] {
+  padding-bottom: 46px;
 }
 .text-center {
   text-align: center;
@@ -1695,33 +1748,22 @@ video {
     background-color: rgb(2 102 193 / var(--tw-bg-opacity));
   }
 
+  .hover-hover\:hover\:bg-outer-space-40:hover {
+    background-color: #2d383f66;
+  }
+
+  .hover-hover\:hover\:bg-black:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
+  .hover-hover\:hover\:bg-outer-space:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(45 56 63 / var(--tw-bg-opacity));
+  }
+
   .hover-hover\:hover\:underline:hover {
     text-decoration-line: underline;
-  }
-
-  .hover-hover\:hover\:placeholder\:text-endeavour:hover::-webkit-input-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(0 83 158 / var(--tw-text-opacity));
-  }
-
-  .hover-hover\:hover\:placeholder\:text-endeavour:hover::-moz-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(0 83 158 / var(--tw-text-opacity));
-  }
-
-  .hover-hover\:hover\:placeholder\:text-endeavour:hover:-ms-input-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(0 83 158 / var(--tw-text-opacity));
-  }
-
-  .hover-hover\:hover\:placeholder\:text-endeavour:hover::-ms-input-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(0 83 158 / var(--tw-text-opacity));
-  }
-
-  .hover-hover\:hover\:placeholder\:text-endeavour:hover::placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(0 83 158 / var(--tw-text-opacity));
   }
 
   .hover-hover\:hover\:placeholder\:text-black:hover::-webkit-input-placeholder {
