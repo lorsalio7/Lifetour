@@ -40,10 +40,12 @@ module.exports = {
       "transparent": "transparent",
       "science-blue": "#0266c1",
       "science-blue-40": "#0266c166",
+      "science-blue-11": "#0266c11c",
       "black-squeeze": "#f5f9fc",
       "endeavour": "#00539e",
       "outer-space": "#2d383f",
       "mystic": "#d9e7ea",
+      "silver-chalice": "#b0b0b0",
     },
     extend: {
       maxWidth: {
