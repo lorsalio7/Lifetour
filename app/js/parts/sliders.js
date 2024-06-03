@@ -1,6 +1,7 @@
 let toursSlider = document.querySelector(".tours-slider");
 let trainersSlider = document.querySelector(".trainers-slider");
 let reviewsSlider = document.querySelector(".reviews-slider");
+let gallerySlider = document.querySelector(".gallery-slider");
 
 if(toursSlider) {
   let toursSliderNextButton = document.querySelector(".tours-slider-next-button");
@@ -79,5 +80,29 @@ if(reviewsSlider) {
   checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
   reviewsSlider.on("moved", () => {
     checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
+  });
+}
+
+if(gallerySlider) {
+  let gallerySliderNextButton = document.querySelector(".gallery-slider-next-button");
+  let gallerySliderPrevButton = document.querySelector(".gallery-slider-prev-button");
+
+  gallerySlider = new Splide(gallerySlider, {
+    speed    : 500,
+    arrows   : false,
+    pagination: false,
+    fixedHeight: '449px',
+    gap: 5,
+    perPage: 5,
+    rewind: true
+  });
+
+  gallerySlider.mount();
+
+  gallerySliderNextButton.addEventListener("click", () => {
+    gallerySlider.go("+1");
+  });
+  gallerySliderPrevButton.addEventListener("click", () => {
+    gallerySlider.go("-1");
   });
 }

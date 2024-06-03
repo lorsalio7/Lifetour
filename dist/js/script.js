@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var toursSlider = document.querySelector(".tours-slider");
   var trainersSlider = document.querySelector(".trainers-slider");
   var reviewsSlider = document.querySelector(".reviews-slider");
+  var gallerySlider = document.querySelector(".gallery-slider");
   if (toursSlider) {
     var toursSliderNextButton = document.querySelector(".tours-slider-next-button");
     var toursSliderPrevButton = document.querySelector(".tours-slider-prev-button");
@@ -89,6 +90,26 @@ window.addEventListener("DOMContentLoaded", function () {
     checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
     reviewsSlider.on("moved", function () {
       checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
+    });
+  }
+  if (gallerySlider) {
+    var gallerySliderNextButton = document.querySelector(".gallery-slider-next-button");
+    var gallerySliderPrevButton = document.querySelector(".gallery-slider-prev-button");
+    gallerySlider = new Splide(gallerySlider, {
+      speed: 500,
+      arrows: false,
+      pagination: false,
+      fixedHeight: '449px',
+      gap: 5,
+      perPage: 5,
+      rewind: true
+    });
+    gallerySlider.mount();
+    gallerySliderNextButton.addEventListener("click", function () {
+      gallerySlider.go("+1");
+    });
+    gallerySliderPrevButton.addEventListener("click", function () {
+      gallerySlider.go("-1");
     });
   }
   ;

@@ -722,6 +722,27 @@ video {
 .mr-\[6px\] {
   margin-right: 6px;
 }
+.mb-\[9px\] {
+  margin-bottom: 9px;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-\[14px\] {
+  margin-bottom: 14px;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-\[46px\] {
+  margin-bottom: 46px;
+}
+.mb-24 {
+  margin-bottom: 6rem;
+}
+.mb-28 {
+  margin-bottom: 7rem;
+}
 .block {
   display: block;
 }
@@ -762,6 +783,15 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[40\.32\%\] {
+  height: 40.32%;
+}
+.h-\[59\.68\%\] {
+  height: 59.68%;
+}
+.h-\[calc\(100\%-5px-59\.68\%\)\] {
+  height: calc(100% - 5px - 59.68%);
+}
 .min-h-\[412px\] {
   min-height: 412px;
 }
@@ -785,6 +815,9 @@ video {
 }
 .max-w-\[490px\] {
   max-width: 490px;
+}
+.max-w-\[700px\] {
+  max-width: 700px;
 }
 .max-w-\[826px\] {
   max-width: 826px;
@@ -816,6 +849,10 @@ video {
       -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.cursor-grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
 .resize {
   resize: both;
 }
@@ -833,6 +870,11 @@ video {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .items-center {
   -webkit-box-align: center;
@@ -1018,6 +1060,9 @@ video {
 }
 .font-medium {
   font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1501,6 +1546,16 @@ video {
 .after\:top-\[-3\%\]::after {
   content: var(--tw-content);
   top: -3%;
+}
+
+.after\:right-\[-24\%\]::after {
+  content: var(--tw-content);
+  right: -24%;
+}
+
+.after\:top-\[-49\%\]::after {
+  content: var(--tw-content);
+  top: -49%;
 }
 
 .after\:z-\[-1\]::after {
