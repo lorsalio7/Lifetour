@@ -37,6 +37,7 @@ module.exports = {
       "black": "#000",
       "black-0": "#00000000",
       "white": "#fff",
+      "white-20": "#ffffff33",
       "transparent": "transparent",
       "science-blue": "#0266c1",
       "science-blue-40": "#0266c166",
