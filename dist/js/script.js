@@ -1,16 +1,20 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
-  /*window.addEventListener("scroll", (e) => {
-  let offsetTop = window.scrollY;
-  document.documentElement.style.setProperty('--scrollTop', `${offsetTop}px`);
-   if(offsetTop > 0) {
-    document.querySelector(".main-header").classList.add("py-4", "bg-science-blue");
-  } else {
-    document.querySelector(".main-header").classList.remove("py-4", "bg-science-blue");
-  }
-  })
-  ;*/
+  AOS.init();
+  window.addEventListener("scroll", function (e) {
+    var offsetTop = window.scrollY;
+    if (offsetTop > 0) {
+      document.querySelector(".main-header").classList.add("py-4", "bg-science-blue");
+    } else {
+      document.querySelector(".main-header").classList.remove("py-4", "bg-science-blue");
+    }
+  });
+  var rellax = new Rellax('.rellax', {
+    wrapper: null,
+    vertical: true
+  });
+  ;
   function checkVisibleSlides(slides, visibleClass, additionalClass) {
     for (var i = 0; i < slides.length; i++) {
       if (!slides[i].classList.contains(visibleClass)) {
