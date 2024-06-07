@@ -40,7 +40,7 @@ function html() {
 
 function css() {
   return src("app/css/style.css")
-  .pipe(postcss([tailwindcss, auto_prefixer({grid: true,overrideBrowserslist: ["last 5 versions"],cascade: true})]))
+  .pipe(postcss([tailwindcss, auto_prefixer({cascade: true})]))
   .pipe(dest("dist/css/"))
   .pipe(clean_css())
   .pipe(rename({
