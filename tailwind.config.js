@@ -50,6 +50,9 @@ module.exports = {
       "silver-chalice": "#b0b0b0",
     },
     extend: {
+      objectPosition: {
+        'center-bottom': 'center bottom',
+      },
       maxWidth: {
         mw: "1230px",
       },
