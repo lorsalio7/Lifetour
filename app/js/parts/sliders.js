@@ -12,7 +12,27 @@ if(toursSlider) {
     pagination: false,
     gap: 20,
     perPage: 3,
-    rewind: true
+    rewind: true,
+    mediaQuery: "max",
+    breakpoints: {
+      1280: {
+        perPage: 2,
+        padding: {right: "25%"},
+      },
+      1024: {
+        padding: {right: 0},
+      },
+      768: {
+        perPage: 1,
+        padding: {right: "30%"},
+      },
+      500: {
+        padding: {right: "10%"},
+      },
+      375: {
+        padding: {right: 0},
+      }
+    }
   });
   toursSlider.mount();
 
