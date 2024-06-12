@@ -2,6 +2,9 @@ let toursSlider = document.querySelector(".tours-slider");
 let trainersSlider = document.querySelector(".trainers-slider");
 let reviewsSlider = document.querySelector(".reviews-slider");
 let gallerySlider = document.querySelector(".gallery-slider");
+let MAX_WIDTH = 1230;
+let currentWidth = window.innerWidth;
+
 
 if(toursSlider) {
   let toursSliderNextButton = document.querySelector(".tours-slider-next-button");
@@ -53,7 +56,25 @@ if(trainersSlider) {
     pagination: false,
     gap: 20,
     perPage: 5,
-    rewind: true
+    rewind: true,
+    mediaQuery: "max",
+    breakpoints: {
+      1024: {
+        perPage: 4,
+      },
+      768: {
+        perPage: 2,
+        padding: {right: "10%"},
+      },
+      500: {
+        perPage: 1,
+        padding: {right: "40%"},
+      },
+      425: {
+        perPage: 1,
+        padding: {right: "20%"},
+      }
+    }
   });
 
   trainersSlider.mount();
@@ -67,9 +88,17 @@ if(trainersSlider) {
 
   let trainersSlides = document.querySelectorAll(".trainers-slider .splide__slide");
 
-  checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
+  window.addEventListener("resize", () => {
+    currentWidth = window.innerWidth;
+    checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
+  })
+
+  checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
   trainersSlider.on("moved", () => {
-    checkVisibleSlides(trainersSlides, "is-visible", "opacity-0");
+    if(currentWidth >= MAX_WIDTH) {
+      checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
+    }
+
   });
 }
 
