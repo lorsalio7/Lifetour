@@ -49,28 +49,10 @@ window.addEventListener("DOMContentLoaded", () => {
   vertical: true,
   });
   ;*/
-  function checkVisibleSlides(slides, visibleClass, additionalClass, maxWidth, currentWidth) {
-    if (currentWidth < maxWidth) {
-      slides.forEach(slide => {
-        slide.classList.remove(additionalClass);
-      });
-    } else {
-      for (let i = 0; i < slides.length; i++) {
-        if (!slides[i].classList.contains(visibleClass)) {
-          slides[i].classList.add(additionalClass);
-        } else {
-          slides[i].classList.remove(additionalClass);
-        }
-      }
-    }
-  }
-  ;
   let toursSlider = document.querySelector(".tours-slider");
   let trainersSlider = document.querySelector(".trainers-slider");
   let reviewsSlider = document.querySelector(".reviews-slider");
   let gallerySlider = document.querySelector(".gallery-slider");
-  let MAX_WIDTH = 1230;
-  let currentWidth = window.innerWidth;
   if (toursSlider) {
     let toursSliderNextButton = document.querySelector(".tours-slider-next-button");
     let toursSliderPrevButton = document.querySelector(".tours-slider-prev-button");
@@ -162,17 +144,6 @@ window.addEventListener("DOMContentLoaded", () => {
     trainersSliderPrevButton.addEventListener("click", () => {
       trainersSlider.go("-1");
     });
-    let trainersSlides = document.querySelectorAll(".trainers-slider .splide__slide");
-    window.addEventListener("resize", () => {
-      currentWidth = window.innerWidth;
-      checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
-    });
-    checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
-    trainersSlider.on("moved", () => {
-      if (currentWidth >= MAX_WIDTH) {
-        checkVisibleSlides(trainersSlides, "is-visible", "opacity-0", MAX_WIDTH, currentWidth);
-      }
-    });
   }
   if (reviewsSlider) {
     let reviewsSliderNextButton = document.querySelector(".reviews-slider-next-button");
@@ -183,7 +154,28 @@ window.addEventListener("DOMContentLoaded", () => {
       pagination: false,
       gap: 15,
       perPage: 3,
-      rewind: true
+      rewind: true,
+      mediaQuery: "max",
+      breakpoints: {
+        1024: {
+          perPage: 2,
+          padding: {
+            right: "15%"
+          }
+        },
+        768: {
+          perPage: 1,
+          padding: {
+            right: "30%"
+          }
+        },
+        425: {
+          perPage: 1,
+          padding: {
+            right: "10%"
+          }
+        }
+      }
     });
     reviewsSlider.mount();
     reviewsSliderNextButton.addEventListener("click", () => {
@@ -191,11 +183,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     reviewsSliderPrevButton.addEventListener("click", () => {
       reviewsSlider.go("-1");
-    });
-    let reviewsSlides = document.querySelectorAll(".reviews-slider .splide__slide");
-    checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
-    reviewsSlider.on("moved", () => {
-      checkVisibleSlides(reviewsSlides, "is-visible", "opacity-0");
     });
   }
   if (gallerySlider) {
