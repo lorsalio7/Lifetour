@@ -195,7 +195,20 @@ window.addEventListener("DOMContentLoaded", () => {
       fixedHeight: '449px',
       gap: 5,
       perPage: 5,
-      rewind: true
+      rewind: true,
+      mediaQuery: "max",
+      breakpoints: {
+        768: {
+          perPage: 4,
+          fixedHeight: '360px'
+        },
+        425: {
+          fixedHeight: '300px'
+        },
+        375: {
+          perPage: 3
+        }
+      }
     });
     gallerySlider.mount();
     gallerySliderNextButton.addEventListener("click", () => {
