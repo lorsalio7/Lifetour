@@ -1,4 +1,4 @@
-<section class="min-h-[780px] bg-cover bg-no-repeat bg-center flex items-center justify-center" style="background-image: url(img/feedback-bg.jpg);" id="feedback">
+<section class="min-h-[780px] bg-cover bg-no-repeat bg-center flex items-center justify-center relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none" style="background-image: url(img/feedback-bg.jpg);" id="feedback">
   <div class="max-w-mw px-[15px] mx-auto h-full">
     <h2 class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Обратная связь</h2>
     <div class="flex flex-col">
@@ -10,7 +10,9 @@
           <label for="user-name" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваше имя</label>
           <input data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" type="text" id="user-phone" name="user-phone" placeholder="Телефон" class="px-[30px] py-[19px] leading-[24px] mr-[18px] w-[354px] border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mr-0 lg:mb-3 lg:w-full lg:grow sm:px-5">
           <label for="user-phone" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваш номер телефона</label>
-          <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" type="submit" class="bg-science-blue text-white font-medium px-[38px] py-[20px] w-[246px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear lg:w-full lg:grow">Отправить</button>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+            <button type="submit" class="bg-science-blue text-white font-medium px-[38px] py-[20px] w-[246px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear lg:w-full lg:grow">Отправить</button>
+          </p>
         </div>
       </form>
     </div>

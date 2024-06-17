@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Lifetour - Походы в горы России</title>
   <meta name="theme-color" content="#0266C1" />
   <link rel="stylesheet" href="/libs/css/aos.css">
+  <link rel="stylesheet" href="/libs/css/baguetteBox.min.css">
   <link rel="stylesheet" href="/libs/css/splide.min.css">
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
@@ -54,7 +55,9 @@
     <div class="md:mb-10 sm:mt-8">
       <h1 data-aos="fade-right" data-aos-duration="1000" class="mb-[2px] font-extrabold text-[45px] text-white relative before:content-['trekking'] before:absolute before:bottom-[-19px] before:left-0 before:uppercase before:text-[93px] before:font-black before:tracking-[0.09em] before:text-black-squeeze before:opacity-20 md:text-[30px] md:before:text-[62px] md:before:bottom-[-13px] sm:leading-[29px] sm:text-[25px] sm:before:text-[35px] sm:before:bottom-[4px]">Походы в горы России</h1>
       <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="text-[19px] text-white max-w-[490px] mb-10 md:text-[17px] sm:text-[16px]">Профессионально организовываем экскурсии на самые красивые вершины страны</p>
-      <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="0" href="#" class="bg-science-blue text-white font-medium px-[36px] py-[18px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear">Выбрать экскурсию</a>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="0">
+        <a  href="#tours" class="bg-science-blue text-white font-medium px-[36px] py-[18px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear">Выбрать экскурсию</a>
+      </div>
     </div>
     <ul data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0" class="flex self-end sm:self-start">
       <li class="mr-5">
@@ -75,13 +78,13 @@
     </ul>
   </div>
   <div class="bg absolute overflow-hidden top-0 left-0 bottom-0 right-0 w-full h-full block" role="img" alt="Красивый вид на горы">
-    <img data-rellax-speed="4" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-30 md:object-[bottom_0_right_35%]" src="img/hero-front-image.png" width="1440" height="828" alt="">
-    <img data-rellax-speed="3" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-20 md:object-[bottom_0_right_35%]" src="img/hero-middle-image.png" width="1440" height="828" alt="">
-    <img data-rellax-speed="2" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-10 md:object-[bottom_0_right_35%]" src="img/hero-back-image.png" width="1440" height="828" alt="">
-    <img data-rellax-speed="4" class="rellax absolute top-0 left-0 bottom-[-4px] right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-40 md:object-[bottom_0_right_35%]" src="img/hero-clouds.png" width="1440" height="828" alt="">
+    <img data-rellax-speed="3" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-30 lg:object-[bottom_0_right_35%]" src="img/hero-front-image.png" width="1440" height="828" alt="">
+    <img data-rellax-speed="2" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-20 lg:object-[bottom_0_right_35%]" src="img/hero-middle-image.png" width="1440" height="828" alt="">
+    <img data-rellax-speed="1" class="rellax absolute top-0 left-0 bottom-0 right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-10 lg:object-[bottom_0_right_35%]" src="img/hero-back-image.png" width="1440" height="828" alt="">
+    <img data-rellax-speed="3" class="rellax absolute top-0 left-0 bottom-[-4px] right-0 object-cover object-center-bottom [will-change:transform] block w-full h-full z-40 lg:object-[bottom_0_right_35%]" src="img/hero-clouds.png" width="1440" height="828" alt="">
   </div>
   <div class="decor-lines h-full w-full absolute top-0 bottom-0 left-1/2 -translate-x-1/2 z-40 ">
-    <div class="flex justify-between h-full max-w-mw mx-auto px-[15px]">
+    <div data-rellax-speed="3" class="rellax flex justify-between h-full max-w-mw mx-auto px-[15px]">
       <span class="border-white-20 border-l-[1px] border-r-[1px] h-full w-1/5"></span>
       <span class="border-white-20 border-r-[1px] h-full block w-1/5"></span>
       <span class="border-white-20 border-r-[1px] h-full block w-1/5"></span>
@@ -91,7 +94,7 @@
   </div>
 </section>
 
-      <section class="tours mb-[100px]" id="tours">
+      <section class="tours mb-[100px] relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none" id="tours">
   <div class="max-w-mw px-[15px] mx-auto relative before:content-[''] before:absolute before:bottom-[-98%] before:overflow-hidden before:right-[-75.5%] before:w-[1367px] before:h-[1240px] before:block before:bg-tour-bg before:bg-contain before:bg-no-repeat before:z-[-1] after:content-[''] after:absolute after:bottom-[-17%] after:left-[-0.5%] after:block after:w-[474px] after:h-[160px] after:bg-small-cloud after:bg-contain after:bg-no-repeat after:z-[-1] xl:before:bottom-[-65%] xl:before:right-[-900px] md:before:right-[-1090px] sm:before:right-[-1120px] xs:before:bottom-[-60%] lg:after:left-[-110px] md:after:left-[-210px] sm:after:bottom-[-12%] sm:after:left-[-310px]">
     <header class="flex justify-between mb-6 sm:justify-center sm:flex-col sm:items-stretch sm:w-full">
       <h2 data-aos="fade-right" data-aos-duration="1000" data-text-title="Ближайшие туры" class="extra-title flex grow font-extrabold text-[35px] text-outer-space relative before:content-[attr(data-text-title)] before:text-[50px] before:text-outer-space before:absolute before:z-[-1] before:left-0 before:bottom-[-5px] before:opacity-[0.03] md:text-[25px] md:before:text-[34px] md:before:bottom-[-3px] sm:before:text-[30px] sm:text-[22px] sm:basis-full sm:text-center sm:mb-4 sm:before:grow sm:before:w-full sm:block sm:before:left-1/2 sm:before:-translate-x-1/2">Ближайшие туры</h2>
@@ -426,8 +429,8 @@
   </div>
 </section>
 
-      <section class="mb-16" id="training">
-  <div class="max-w-mw px-[15px] mx-auto">
+      <section class="mb-16 relative pointer-events-none before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none" id="training">
+  <div class="pointer-events-auto max-w-mw px-[15px] mx-auto">
     <header class="mb-[58px]">
       <h2 data-aos="fade-right" data-aos-duration="1000" data-text-title="Обучение" class="grow font-extrabold text-[35px] text-outer-space mb-[22px] relative before:content-[attr(data-text-title)] before:text-[50px] before:text-outer-space before:absolute before:left-0 before:bottom-[-5px] before:opacity-[0.03] md:text-[25px] md:before:text-[34px] md:before:bottom-[-3px] sm:before:text-[30px] sm:text-[22px] sm:basis-full sm:text-center sm:mb-4 sm:before:grow sm:before:w-full sm:block sm:before:left-1/2 sm:before:-translate-x-1/2">Обучение</h2>
       <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="leading-6 max-w-[826px] sm:text-center">Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
@@ -621,7 +624,7 @@
   </div>
 </section>
 
-      <section id="about">
+      <section id="about" class="relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none">
   <div class="max-w-mw px-[15px] mx-auto flex items-center justify-between relative after:content-[''] after:absolute after:top-[-3%] after:right-[-8%] after:block after:w-[474px] after:h-[160px] after:bg-small-cloud after:bg-contain after:bg-no-repeat after:z-[-1] md:flex-col-reverse md:after:-right-1/2 sm:after:-right-3/4">
     <div class="basis-1/2 lg:basis-3/5 ml-[-120px] grow z-[-1] lg:ml-[-300px] md:ml-0 md:basis-full">
       <img src="img/about-bg.jpg" width="752" height="544" aria-hidden="true" class="block object-contain w-full h-full">
@@ -636,7 +639,7 @@
   </div>
 </section>
 
-      <section class="reviews mb-28" id="reviews">
+      <section class="reviews mb-28 relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none" id="reviews">
   <div class="max-w-mw px-[15px] mx-auto">
     <header class="flex justify-between mb-6 sm:flex-col sm:items-shrink">
       <h2 data-aos="fade-right" data-aos-duration="1000" data-text-title="Отзывы" class="flex grow font-extrabold text-[35px] text-outer-space relative before:content-[attr(data-text-title)] before:text-[50px] before:text-outer-space before:absolute before:left-0 before:bottom-[-5px] before:opacity-[0.03] md:text-[25px] md:before:text-[34px] md:before:bottom-[-3px] sm:before:text-[30px] sm:text-[22px] sm:basis-full sm:text-center sm:mb-4 sm:before:grow sm:before:w-full sm:block sm:before:left-1/2 sm:before:-translate-x-1/2">Отзывы</h2>
@@ -752,7 +755,7 @@
   </div>
 </section>
 
-      <section id="gallery">
+      <section id="gallery" class="relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none">
   <div class="max-w-mw px-[15px] mx-auto relative after:content-[''] after:absolute after:top-[-49%] after:right-[-24%] after:block after:w-[474px] after:h-[160px] after:bg-small-cloud after:bg-contain after:bg-no-repeat after:z-[-1] md:after:right-[-34%] xs:after:right-[-50%]">
     <header class="flex items-end justify-between mb-[46px] sm:justify-center sm:flex-col sm:items-center">
       <div class="mr-4 sm:mb-4 sm:mr-0">
@@ -775,66 +778,66 @@
   </div>
   <div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="900" class="gallery-slider splide">
     <div class="splide__track">
-      <ul class="splide__list">
+      <ul class="splide__list gallery">
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-1-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-1-full.jpg">
             <img src="img/gallery-1-thumb.jpg" width="275" height="449" alt="Фото 1" class="block object-cover w-full h-full">
           </a>
         </li>
         <li class="splide__slide gallery-col">
-          <a data-fslightbox href="img/gallery-2-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-2-full.jpg">
             <img src="img/gallery-2-thumb.jpg" width="298" height="179" alt="Фото 2" class="block object-cover w-full h-[calc(100%-5px-59.68%)] mb-[5px]">
           </a>
-          <a data-fslightbox href="img/gallery-3-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-3-full.jpg">
             <img src="img/gallery-3-thumb.jpg" width="298" height="265" alt="Фото 3" class="block object-cover w-full h-[59.68%]">
           </a>
         </li>
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-4-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-4-full.jpg">
             <img src="img/gallery-4-thumb.jpg" width="275" height="449" alt="Фото 4" class="block object-cover w-full h-full">
           </a>
         </li>
         <li class="splide__slide gallery-col">
-          <a data-fslightbox href="img/gallery-5-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-5-full.jpg">
             <img src="img/gallery-5-thumb.jpg" width="298" height="179" alt="Фото 5" class="block object-cover w-full h-[calc(100%-5px-59.68%)] mb-[5px]">
           </a>
-          <a data-fslightbox href="img/gallery-6-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-6-full.jpg">
             <img src="img/gallery-6-thumb.jpg" width="298" height="265" alt="Фото 6" class="block object-cover w-full h-[59.68%]">
           </a>
         </li>
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-7-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-7-full.jpg">
             <img src="img/gallery-7-thumb.jpg" width="275" height="449" alt="Фото 7" class="block object-cover w-full h-full">
           </a>
         </li>
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-1-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-1-full.jpg">
             <img src="img/gallery-1-thumb.jpg" width="275" height="449" alt="Фото 1" class="block object-cover w-full h-full">
           </a>
         </li>
         <li class="splide__slide gallery-col">
-          <a data-fslightbox href="img/gallery-2-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-2-full.jpg">
             <img src="img/gallery-2-thumb.jpg" width="298" height="179" alt="Фото 2" class="block object-cover w-full h-[calc(100%-5px-59.68%)] mb-[5px]">
           </a>
-          <a data-fslightbox href="img/gallery-3-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-3-full.jpg">
             <img src="img/gallery-3-thumb.jpg" width="298" height="265" alt="Фото 3" class="block object-cover w-full h-[59.68%]">
           </a>
         </li>
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-4-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-4-full.jpg">
             <img src="img/gallery-4-thumb.jpg" width="275" height="449" alt="Фото 4" class="block object-cover w-full h-full">
           </a>
         </li>
         <li class="splide__slide gallery-col">
-          <a data-fslightbox href="img/gallery-5-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-5-full.jpg">
             <img src="img/gallery-5-thumb.jpg" width="298" height="179" alt="Фото 5" class="block object-cover w-full h-[calc(100%-5px-59.68%)] mb-[5px]">
           </a>
-          <a data-fslightbox href="img/gallery-6-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-6-full.jpg">
             <img src="img/gallery-6-thumb.jpg" width="298" height="265" alt="Фото 6" class="block object-cover w-full h-[59.68%]">
           </a>
         </li>
         <li class="splide__slide">
-          <a data-fslightbox href="img/gallery-7-full.jpg">
+          <a data-fslightbox="first-gallery" href="img/gallery-7-full.jpg">
             <img src="img/gallery-7-thumb.jpg" width="275" height="449" alt="Фото 7" class="block object-cover w-full h-full">
           </a>
         </li>
@@ -843,7 +846,7 @@
   </div>
 </section>
 
-      <section class="min-h-[780px] bg-cover bg-no-repeat bg-center flex items-center justify-center" style="background-image: url(img/feedback-bg.jpg);" id="feedback">
+      <section class="min-h-[780px] bg-cover bg-no-repeat bg-center flex items-center justify-center relative before:content-[''] before:block before:-mt-[var(--header-height)] before:w-[1px] before:h-[var(--header-height)] before:invisible before:pointer-events-none" style="background-image: url(img/feedback-bg.jpg);" id="feedback">
   <div class="max-w-mw px-[15px] mx-auto h-full">
     <h2 class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Обратная связь</h2>
     <div class="flex flex-col">
@@ -855,7 +858,9 @@
           <label for="user-name" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваше имя</label>
           <input data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" type="text" id="user-phone" name="user-phone" placeholder="Телефон" class="px-[30px] py-[19px] leading-[24px] mr-[18px] w-[354px] border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mr-0 lg:mb-3 lg:w-full lg:grow sm:px-5">
           <label for="user-phone" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваш номер телефона</label>
-          <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" type="submit" class="bg-science-blue text-white font-medium px-[38px] py-[20px] w-[246px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear lg:w-full lg:grow">Отправить</button>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+            <button type="submit" class="bg-science-blue text-white font-medium px-[38px] py-[20px] w-[246px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear lg:w-full lg:grow">Отправить</button>
+          </p>
         </div>
       </form>
     </div>
@@ -928,7 +933,7 @@
   <script src="/libs/js/rellax.min.js" defer></script>
   <script src="/libs/js/aos.js" defer></script>
   <script src="/libs/js/splide.min.js" defer></script>
-  <script src="/libs/js/fslightbox.js" defer></script>
+  <script src="/libs/js/baguetteBox.min.js" defer></script>
   <script src="/js/script.min.js" defer></script>
 </body>
 </html>
