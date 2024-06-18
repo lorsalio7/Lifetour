@@ -559,9 +559,6 @@ video {
 .z-\[60\] {
   z-index: 60;
 }
-.z-\[5\] {
-  z-index: 5;
-}
 .order-1 {
   order: 1;
 }
@@ -673,6 +670,45 @@ video {
 }
 .mr-\[6px\] {
   margin-right: 6px;
+}
+.mb-\[70px\] {
+  margin-bottom: 70px;
+}
+.mb-\[72px\] {
+  margin-bottom: 72px;
+}
+.mb-\[74px\] {
+  margin-bottom: 74px;
+}
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+.mb-\[80px\] {
+  margin-bottom: 80px;
+}
+.mb-\[82px\] {
+  margin-bottom: 82px;
+}
+.mb-\[84px\] {
+  margin-bottom: 84px;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-\[90px\] {
+  margin-bottom: 90px;
+}
+.mb-\[86px\] {
+  margin-bottom: 86px;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
 }
 .block {
   display: block;
@@ -1142,11 +1178,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-\[background-color\] {
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .delay-300 {
   transition-delay: 300ms;
 }
@@ -1383,6 +1414,26 @@ video {
   top: 0px;
 }
 
+.before\:bottom-\[-95\%\]::before {
+  content: var(--tw-content);
+  bottom: -95%;
+}
+
+.before\:bottom-\[14px\]::before {
+  content: var(--tw-content);
+  bottom: 14px;
+}
+
+.before\:bottom-\[-2px\]::before {
+  content: var(--tw-content);
+  bottom: -2px;
+}
+
+.before\:bottom-\[-8px\]::before {
+  content: var(--tw-content);
+  bottom: -8px;
+}
+
 .before\:z-0::before {
   content: var(--tw-content);
   z-index: 0;
@@ -1391,11 +1442,6 @@ video {
 .before\:z-\[-1\]::before {
   content: var(--tw-content);
   z-index: -1;
-}
-
-.before\:z-\[4\]::before {
-  content: var(--tw-content);
-  z-index: 4;
 }
 
 .before\:-mt-\[var\(--header-height\)\]::before {
@@ -1720,11 +1766,6 @@ video {
 .after\:z-\[-1\]::after {
   content: var(--tw-content);
   z-index: -1;
-}
-
-.after\:z-\[4\]::after {
-  content: var(--tw-content);
-  z-index: 4;
 }
 
 .after\:block::after {
@@ -2192,6 +2233,11 @@ video {
   .md\:before\:content-\[\'\'\]::before {
     --tw-content: '';
     content: var(--tw-content);
+  }
+
+  .md\:before\:\[white-space\:nowrap\]::before {
+    content: var(--tw-content);
+    white-space: nowrap;
   }
 
   .md\:after\:-right-1\/2::after {

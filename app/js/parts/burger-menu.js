@@ -5,12 +5,18 @@ if(burgerButton) {
   let burgerButtonLine = burgerButton.querySelector(".burger-button-line");
   let burgerButtonLineClassList = Array.from(burgerButtonLine.classList).join(" ");
   let siteNavigation = document.querySelector(".site-navigation");
+  let navigationLinks = siteNavigation.querySelectorAll(".navigation-link");
 
   burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("burger-button--active");
 
     if(burgerButton.classList.contains("burger-button--active")) {
       openSiteMenu();
+      navigationLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          closeSiteMenu();
+        });
+      });
     } else {
       closeSiteMenu();
     }
