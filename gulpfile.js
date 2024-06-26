@@ -13,7 +13,6 @@ const newer = require("gulp-newer");
 const clean_css = require("gulp-clean-css");
 const babel = require("gulp-babel");
 const webp = require("gulp-webp");
-const avif_images = require("gulp-avif");
 const pngquant = require("imagemin-pngquant");
 const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify-es").default;

@@ -1,7 +1,46 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-  AOS.init();
+  AOS.init({
+    once: "true"
+  });
+  // =========================== Фикс скачка браузерного скролла и плавной прокрутки ==========================================
+
+  const scrollController = {
+    scrollPosition: 0,
+    disabledScroll(fixedElement) {
+      if (fixedElement) {
+        let fixedElements = document.querySelectorAll(fixedElement);
+        fixedElements.forEach(element => {
+          element.style.paddingRight = "".concat(parseInt(window.innerWidth - document.body.offsetWidth), "px");
+        });
+      }
+      scrollController.scrollPosition = window.scrollY;
+      document.body.style.cssText = "\n      overflow: hidden;\n      position: fixed;\n      top: -".concat(scrollController.scrollPosition, "px;\n      left: 0;\n      height: 100vh;\n      width: 100vw;\n      padding-right: ").concat(parseInt(window.innerWidth - document.body.offsetWidth), "px;\n    ");
+      document.documentElement.style.scrollBehavior = "unset";
+    },
+    enabledScrool(fixedElement) {
+      document.body.style.cssText = "";
+      window.scroll({
+        top: scrollController.scrollPosition
+      });
+      document.documentElement.style.scrollBehavior = "";
+      if (fixedElement) {
+        let fixedElements = document.querySelectorAll(fixedElement);
+        fixedElements.forEach(element => {
+          element.style.paddingRight = "0";
+        });
+      }
+    }
+  };
+  window.addEventListener("scroll", e => {
+    let offsetTop = window.scrollY;
+    if (offsetTop > 0) {
+      document.querySelector(".main-header").classList.add("py-3", "bg-science-blue");
+    } else {
+      document.querySelector(".main-header").classList.remove("py-3", "bg-science-blue");
+    }
+  });
   let headerSite = document.querySelector(".main-header");
   let headerSiteHeight = headerSite.offsetHeight;
   window.addEventListener("resize", () => {
@@ -12,14 +51,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   setHeaderHeight();
   ;
-  window.addEventListener("scroll", e => {
-    let offsetTop = window.scrollY;
-    if (offsetTop > 0) {
-      document.querySelector(".main-header").classList.add("py-3", "bg-science-blue");
-    } else {
-      document.querySelector(".main-header").classList.remove("py-3", "bg-science-blue");
-    }
-  });
   let burgerButton = document.querySelector(".burger-button");
   if (burgerButton) {
     let burgerMenuWidth = window.matchMedia("(max-width: 768px)");
@@ -41,13 +72,17 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
     function openSiteMenu() {
+      setTimeout(() => {
+        scrollController.disabledScroll();
+      }, 300);
       burgerButtonLine.className = "burger-button-line absolute left-1/2 top-1/2 block w-[34px] h-[2px] -translate-x-1/2 -translate-y-1/2 transition-colors duration-300 delay-300 ease-linear bg-transparent before:content-[''] before:absolute before:block before:w-[34px] before:h-[2px] before:bg-white before:left-0 before:top-0 before:rotate-45 before:transition-[top,transform] before:duration-[0.3s,0.3s] before:delay-[0s,0.3s] before:ease-[linear,linear] after:content-[''] after:absolute after:left-0 after:top-0 after:-rotate-45 after:block after:w-[34px] after:h-[2px] after:bg-white after:transition-[top,transform] after:duration-[0.3s,0.3s] after:delay-[0s,0.3s] after:ease-linear";
-      siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:translate-x-0 md:justify-center md:py-[86px] md:items-center";
+      siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:translate-x-0 md:justify-start md:py-[86px] md:items-center";
     }
     function closeSiteMenu() {
+      scrollController.enabledScrool();
       burgerButton.classList.remove("burger-button--active");
       burgerButtonLine.className = burgerButtonLineClassList;
-      siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:-translate-x-[100%] md:justify-center md:py-[86px] md:items-center";
+      siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:-translate-x-[100%] md:justify-start md:py-[86px] md:items-center";
     }
     function changeMenuView(width) {
       if (!width) {
@@ -61,7 +96,8 @@ window.addEventListener("DOMContentLoaded", () => {
   ;
   let rellax = new Rellax('.rellax', {
     wrapper: null,
-    vertical: true
+    vertical: true,
+    breakpoints: [425, 768, 1201]
   });
   ;
   let gallery = document.querySelector(".gallery");
@@ -83,6 +119,47 @@ window.addEventListener("DOMContentLoaded", () => {
     // let closeGalleryButton = document.querySelector("#close-button");
     // closeGalleryButton.classList.add("bg-science-blue");
     // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
+  }
+  ;
+  const feedbackForm = document.querySelector(".feedback-form");
+  if (feedbackForm) {
+    let validateFeedbackForm = new window.JustValidate(feedbackForm, {
+      errorFieldCssClass: 'bg-white w-[354px]',
+      errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4'
+    });
+    let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
+    let im = new Inputmask("+7 (999) 999-99-99");
+    im.mask(userphoneInput);
+
+    // setTimeout(()=>{
+    //   console.log(userphoneInput.im.unmaskedvalue());
+
+    // },3000)
+
+    validateFeedbackForm.addField("#user-name", [{
+      rule: 'required',
+      errorMessage: 'Введите имя'
+    }, {
+      rule: 'customRegexp',
+      value: "[а-яё]",
+      errorMessage: 'Допустимы только кирилица'
+    }, {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Минимум 2 символа'
+    }, {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Максимум 30 символов'
+    }]).addField("#user-phone", [{
+      rule: 'required',
+      errorMessage: 'Это поле обязательно'
+    }, {
+      validator: (value, context) => {
+        return value.replace(/\D/g, '').length === 11;
+      },
+      errorMessage: 'Введите номер полностью'
+    }]);
   }
   ;
   let toursSlider = document.querySelector(".tours-slider");

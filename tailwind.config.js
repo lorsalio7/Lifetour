@@ -15,6 +15,12 @@ module.exports = {
       "lg": { "min": "1024px" },
       "xl": { "min": "1280px" },
       "xxl": { "min": "1536px" }, */
+      "tallxxs": { "raw": "(max-height: 320px)"},
+      "tallxs": { "raw": "(max-height: 375px)"},
+      "tallsm": { "raw": "(max-height: 425px)"},
+      "tallmd": { "raw": "(max-height: 768px)"},
+      "talllg": { "raw": "(max-height: 1024px)"},
+      "tallxl": { "raw": "(max-height: 1280px)"},
       "xxl": { "max": "1536px" },
       "xl": { "max": "1280px" },
       "lg": { "max": "1024px" },

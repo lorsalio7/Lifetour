@@ -4,12 +4,16 @@
     <div class="flex flex-col">
       <p data-aos="fade-up" data-aos-duration="1000" data-text-title="Остались вопросы?" class="grow w-full font-extrabold text-[35px] text-white text-center mb-[6px] relative before:content-[attr(data-text-title)] before:text-[50px] before:text-white before:absolute before:left-1/2 before:w-full before:-translate-x-1/2 before:bottom-[-5px] before:opacity-[0.03] md:text-[25px] md:before:text-[34px] md:before:bottom-[-3px] md:[text-shadow:0_0_5px_rgba(0,0,0,0.6)] sm:before:text-[30px] sm:text-[22px] sm:basis-full sm:text-center sm:mb-4 sm:before:grow sm:before:w-full sm:block">Остались вопросы?</p>
       <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="leading-[24px] text-white text-center mb-11 md:[text-shadow:0_0_3px_rgba(0,0,0,0.7)] sm:mb-7">Заполните форму и наш оператор свяжется с вами для консультации.</p>
-      <form action="#" method="post lg:max-w-96">
-        <div class="flex items-center justify-center lg:flex-col lg:w-full lg:items-stretch">
-          <input data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" type="text" id="user-name" name="user-name" placeholder="Как к вам обращаться?" class="px-[30px] py-[19px] leading-[24px] mr-[13px] w-[354px] border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mr-0 lg:mb-3 lg:w-full lg:grow sm:px-5">
-          <label for="user-name" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваше имя</label>
-          <input data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" type="text" id="user-phone" name="user-phone" placeholder="Телефон" class="px-[30px] py-[19px] leading-[24px] mr-[18px] w-[354px] border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mr-0 lg:mb-3 lg:w-full lg:grow sm:px-5">
-          <label for="user-phone" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваш номер телефона</label>
+      <form action="#" method="get" class="feedback-form lg:max-w-96" autocomplete="off" novalidate="novalidate">
+        <div class="flex items-start justify-center lg:flex-col lg:w-full lg:items-stretch">
+          <div class="relative w-[354px] mr-[13px] lg:mr-0 lg:w-full lg:mb-6">
+            <input required data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" type="text" id="user-name" name="user-name" placeholder="Как к вам обращаться?" class="feedback-user-name rounded-none px-[30px] py-[19px] leading-[24px] w-full border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mb-3 lg:grow sm:px-5" autocomplete="off">
+            <label for="user-name" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваше имя</label>
+          </div>
+          <div class="relative w-[354px] mr-[18px] lg:mr-0 lg:w-full lg:mb-6">
+            <input required data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" type="text" id="user-phone" name="user-phone" placeholder="Телефон" class="feedback-user-phone rounded-none px-[30px] py-[19px] leading-[24px] w-full border-[1px] border-science-blue-11 placeholder:text-silver-chalice hover-hover:hover:placeholder:text-black lg:mb-3 lg:w-full lg:grow sm:px-5" autocomplete="off">
+            <label for="user-phone" class="absolute overflow-hidden -margin-[1px] border-0 p-0 w-[1px] h-[1px] [clip:rect(0_0_0_0)]">Ваш номер телефона</label>
+          </div>
           <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
             <button type="submit" class="bg-science-blue text-white font-medium px-[38px] py-[20px] w-[246px] inline-block hover-hover:hover:bg-endeavour transition-colors duration-200 ease-linear lg:w-full lg:grow">Отправить</button>
           </p>
