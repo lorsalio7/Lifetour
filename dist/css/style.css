@@ -689,6 +689,9 @@ video {
 .mr-\[6px\] {
   margin-right: 6px;
 }
+.mb-\[4px\] {
+  margin-bottom: 4px;
+}
 .block {
   display: block;
 }
