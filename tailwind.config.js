@@ -36,6 +36,9 @@ module.exports = {
         sm: "15px",
       }
     },
+    backgroundPosition: {
+      "right-center": "right center",
+    },
     fontFamily: {
       "sans": ["Montserrat", "sans-serif"],
     },
@@ -65,6 +68,7 @@ module.exports = {
       backgroundImage: {
         "link-arrow": "url('/img/small-right-arrow-ic.svg')",
         "tour-bg": "url('/img/tour-bg.png')",
+        "tours-tablet-bg": "url('/img/tours-tablet-bg.png')",
         "small-cloud": "url('/img/small-cloud-decor.png')",
       },
       boxShadow: {

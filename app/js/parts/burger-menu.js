@@ -12,6 +12,7 @@ if(burgerButton) {
 
     if(burgerButton.classList.contains("burger-button--active")) {
       openSiteMenu();
+      burgerButton.setAttribute("aria-label", "Закрыть главное меню");
       navigationLinks.forEach(link => {
         link.addEventListener("click", () => {
           closeSiteMenu();
@@ -19,6 +20,7 @@ if(burgerButton) {
       });
     } else {
       closeSiteMenu();
+      burgerButton.setAttribute("aria-label", "Открыть главное меню");
     }
   })
 

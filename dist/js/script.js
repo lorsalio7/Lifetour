@@ -62,6 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
       burgerButton.classList.toggle("burger-button--active");
       if (burgerButton.classList.contains("burger-button--active")) {
         openSiteMenu();
+        burgerButton.setAttribute("aria-label", "Закрыть главное меню");
         navigationLinks.forEach(link => {
           link.addEventListener("click", () => {
             closeSiteMenu();
@@ -69,6 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
       } else {
         closeSiteMenu();
+        burgerButton.setAttribute("aria-label", "Открыть главное меню");
       }
     });
     function openSiteMenu() {
@@ -225,6 +227,7 @@ window.addEventListener("DOMContentLoaded", () => {
       gap: 20,
       perPage: 5,
       rewind: true,
+      lazyLoad: true,
       mediaQuery: "max",
       breakpoints: {
         1024: {
@@ -309,6 +312,7 @@ window.addEventListener("DOMContentLoaded", () => {
       gap: 5,
       perPage: 5,
       rewind: true,
+      lazyLoad: true,
       mediaQuery: "max",
       breakpoints: {
         768: {
