@@ -931,7 +931,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-link-arrow {
-  background-image: url('/img/small-right-arrow-ic.svg');
+  background-image: url('../img/small-right-arrow-ic.svg');
 }
 .bg-\[length\:25px_25px\] {
   background-size: 25px 25px;
@@ -1538,7 +1538,7 @@ video {
 
 .before\:bg-tour-bg::before {
   content: var(--tw-content);
-  background-image: url('/img/tour-bg.png');
+  background-image: url('../img/tour-bg.png');
 }
 
 .before\:from-black-0::before {
@@ -1789,7 +1789,7 @@ video {
 
 .after\:bg-small-cloud::after {
   content: var(--tw-content);
-  background-image: url('/img/small-cloud-decor.png');
+  background-image: url('../img/small-cloud-decor.png');
 }
 
 .after\:bg-contain::after {
@@ -2260,7 +2260,7 @@ video {
 
   .md\:before\:bg-tours-tablet-bg::before {
     content: var(--tw-content);
-    background-image: url('/img/tours-tablet-bg.png');
+    background-image: url('../img/tours-tablet-bg.png');
   }
 
   .md\:before\:text-\[34px\]::before {

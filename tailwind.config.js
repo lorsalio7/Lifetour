@@ -66,10 +66,10 @@ module.exports = {
         mw: "1230px",
       },
       backgroundImage: {
-        "link-arrow": "url('/img/small-right-arrow-ic.svg')",
-        "tour-bg": "url('/img/tour-bg.png')",
-        "tours-tablet-bg": "url('/img/tours-tablet-bg.png')",
-        "small-cloud": "url('/img/small-cloud-decor.png')",
+        "link-arrow": "url('../img/small-right-arrow-ic.svg')",
+        "tour-bg": "url('../img/tour-bg.png')",
+        "tours-tablet-bg": "url('../img/tours-tablet-bg.png')",
+        "small-cloud": "url('../img/small-cloud-decor.png')",
       },
       boxShadow: {
         "slides-shadow": "0 0 25px #0000000a",

@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     once: "true",
   });
@@ -8,6 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
   @@include("parts/burger-menu.js");
   @@include("parts/parallax-init.js");
   @@include("parts/gallery-config.js");
-  @@include("parts/mask-inputs.js");
+  /*@@include("parts/mask-inputs.js");  */
   @@include("parts/sliders.js");
 });

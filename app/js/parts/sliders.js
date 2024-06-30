@@ -56,7 +56,7 @@ if(trainersSlider) {
     gap: 20,
     perPage: 5,
     rewind: true,
-    lazyLoad: true,
+    // lazyLoad: true,
     mediaQuery: "max",
     breakpoints: {
       1024: {
@@ -139,7 +139,7 @@ if(gallerySlider) {
     gap: 5,
     perPage: 5,
     rewind: true,
-    lazyLoad: true,
+    // lazyLoad: true,
     mediaQuery: "max",
     breakpoints: {
       768: {
