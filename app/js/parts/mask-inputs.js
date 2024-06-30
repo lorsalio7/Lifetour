@@ -9,11 +9,6 @@ if(feedbackForm) {
   let im = new Inputmask("+7 (999) 999-99-99");
   im.mask(userphoneInput);
 
-  // setTimeout(()=>{
-  //   console.log(userphoneInput.im.unmaskedvalue());
-
-  // },3000)
-
 
   validateFeedbackForm
     .addField("#user-name", [

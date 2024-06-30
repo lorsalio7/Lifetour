@@ -123,54 +123,41 @@ document.addEventListener("DOMContentLoaded", () => {
     // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
   }
   ;
-  /*const feedbackForm = document.querySelector(".feedback-form");
-  if(feedbackForm) {
-  let validateFeedbackForm = new window.JustValidate(feedbackForm, {
-    errorFieldCssClass: 'bg-white w-[354px]',
-    errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4',
-  });
-  let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
-  let im = new Inputmask("+7 (999) 999-99-99");
-  im.mask(userphoneInput);
-   // setTimeout(()=>{
-  //   console.log(userphoneInput.im.unmaskedvalue());
-   // },3000)
-    validateFeedbackForm
-    .addField("#user-name", [
-      {
-        rule: 'required',
-        errorMessage: 'Введите имя',
+  const feedbackForm = document.querySelector(".feedback-form");
+  if (feedbackForm) {
+    let validateFeedbackForm = new window.JustValidate(feedbackForm, {
+      errorFieldCssClass: 'bg-white w-[354px]',
+      errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4'
+    });
+    let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
+    let im = new Inputmask("+7 (999) 999-99-99");
+    im.mask(userphoneInput);
+    validateFeedbackForm.addField("#user-name", [{
+      rule: 'required',
+      errorMessage: 'Введите имя'
+    }, {
+      rule: 'customRegexp',
+      value: "[а-яё]",
+      errorMessage: 'Допустимы только кирилица'
+    }, {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Минимум 2 символа'
+    }, {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Максимум 30 символов'
+    }]).addField("#user-phone", [{
+      rule: 'required',
+      errorMessage: 'Это поле обязательно'
+    }, {
+      validator: (value, context) => {
+        return value.replace(/\D/g, '').length === 11;
       },
-      {
-        rule: 'customRegexp',
-        value: "[а-яё]",
-        errorMessage: 'Допустимы только кирилица',
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Минимум 2 символа',
-      },
-      {
-        rule: 'maxLength',
-        value: 30,
-        errorMessage: 'Максимум 30 символов',
-      }
-    ])
-    .addField("#user-phone", [
-      {
-        rule: 'required',
-        errorMessage: 'Это поле обязательно',
-      },
-      {
-        validator: (value, context) => {
-          return value.replace(/\D/g, '').length === 11;
-        },
-        errorMessage: 'Введите номер полностью',
-      },
-     ])
+      errorMessage: 'Введите номер полностью'
+    }]);
   }
-  ;  */
+  ;
   let toursSlider = document.querySelector(".tours-slider");
   let trainersSlider = document.querySelector(".trainers-slider");
   let reviewsSlider = document.querySelector(".reviews-slider");
