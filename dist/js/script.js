@@ -1,9 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    once: "true"
-  });
   // =========================== Фикс скачка браузерного скролла и плавной прокрутки ==========================================
 
   const scrollController = {
@@ -101,62 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
     vertical: true,
     breakpoints: [425, 768, 1201]
   });
-  ;
-  let gallery = document.querySelector(".gallery");
-  if (gallery) {
-    baguetteBox.run('.gallery');
-    document.querySelector("#close-button").classList.add("hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
-    document.querySelector("#close-button svg").setAttribute("viewBox", "0 0 30 30");
-    document.querySelector("#close-button svg").setAttribute("width", "20");
-    document.querySelector("#close-button svg").setAttribute("height", "20");
-    document.querySelector("#close-button svg").setAttribute("preserveAspectRatio", "xMidYMid meet");
-    document.querySelector("#close-button svg").setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    document.querySelector("#next-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
-    document.querySelector("#next-button").innerHTML = "";
-    document.querySelector("#next-button").innerHTML = "\n  <svg width=\"14\" height=\"8\" id=\"right-arrow\" viewBox=\"0 0 14 8\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"m10.422.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 0 1-.708-.708L12.043 4.5H.25v-1h11.793L9.714 1.172a.5.5 0 1 1 .708-.708Z\" fill=\"#fff\" />\n  </svg>\n  ";
-    document.querySelector("#previous-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
-    document.querySelector("#previous-button").innerHTML = "";
-    document.querySelector("#previous-button").innerHTML = "\n  <svg width=\"14\" height=\"8\" id=\"left-arrow\" viewBox=\"0 0 14 8\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.578.464.396 3.646a.5.5 0 0 0 0 .708l3.182 3.182a.5.5 0 1 0 .708-.708L1.957 4.5H13.75v-1H1.957l2.329-2.328a.5.5 0 1 0-.708-.708Z\" fill=\"#fff\" />\n  </svg>\n  ";
-
-    // let closeGalleryButton = document.querySelector("#close-button");
-    // closeGalleryButton.classList.add("bg-science-blue");
-    // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
-  }
-  ;
-  const feedbackForm = document.querySelector(".feedback-form");
-  if (feedbackForm) {
-    let validateFeedbackForm = new window.JustValidate(feedbackForm, {
-      errorFieldCssClass: 'bg-white w-[354px]',
-      errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4'
-    });
-    let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
-    let im = new Inputmask("+7 (999) 999-99-99");
-    im.mask(userphoneInput);
-    validateFeedbackForm.addField("#user-name", [{
-      rule: 'required',
-      errorMessage: 'Введите имя'
-    }, {
-      rule: 'customRegexp',
-      value: "[а-яё]",
-      errorMessage: 'Допустимы только кирилица'
-    }, {
-      rule: 'minLength',
-      value: 2,
-      errorMessage: 'Минимум 2 символа'
-    }, {
-      rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Максимум 30 символов'
-    }]).addField("#user-phone", [{
-      rule: 'required',
-      errorMessage: 'Это поле обязательно'
-    }, {
-      validator: (value, context) => {
-        return value.replace(/\D/g, '').length === 11;
-      },
-      errorMessage: 'Введите номер полностью'
-    }]);
-  }
   ;
   let toursSlider = document.querySelector(".tours-slider");
   let trainersSlider = document.querySelector(".trainers-slider");
@@ -328,6 +269,62 @@ document.addEventListener("DOMContentLoaded", () => {
     gallerySliderPrevButton.addEventListener("click", () => {
       gallerySlider.go("-1");
     });
+  }
+  ;
+  let gallery = document.querySelector(".gallery");
+  if (gallery) {
+    baguetteBox.run('.gallery');
+    document.querySelector("#close-button").classList.add("hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+    document.querySelector("#close-button svg").setAttribute("viewBox", "0 0 30 30");
+    document.querySelector("#close-button svg").setAttribute("width", "20");
+    document.querySelector("#close-button svg").setAttribute("height", "20");
+    document.querySelector("#close-button svg").setAttribute("preserveAspectRatio", "xMidYMid meet");
+    document.querySelector("#close-button svg").setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    document.querySelector("#next-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+    document.querySelector("#next-button").innerHTML = "";
+    document.querySelector("#next-button").innerHTML = "\n  <svg width=\"14\" height=\"8\" id=\"right-arrow\" viewBox=\"0 0 14 8\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"m10.422.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 0 1-.708-.708L12.043 4.5H.25v-1h11.793L9.714 1.172a.5.5 0 1 1 .708-.708Z\" fill=\"#fff\" />\n  </svg>\n  ";
+    document.querySelector("#previous-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+    document.querySelector("#previous-button").innerHTML = "";
+    document.querySelector("#previous-button").innerHTML = "\n  <svg width=\"14\" height=\"8\" id=\"left-arrow\" viewBox=\"0 0 14 8\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.578.464.396 3.646a.5.5 0 0 0 0 .708l3.182 3.182a.5.5 0 1 0 .708-.708L1.957 4.5H13.75v-1H1.957l2.329-2.328a.5.5 0 1 0-.708-.708Z\" fill=\"#fff\" />\n  </svg>\n  ";
+
+    // let closeGalleryButton = document.querySelector("#close-button");
+    // closeGalleryButton.classList.add("bg-science-blue");
+    // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
+  }
+  ;
+  const feedbackForm = document.querySelector(".feedback-form");
+  if (feedbackForm) {
+    let validateFeedbackForm = new window.JustValidate(feedbackForm, {
+      errorFieldCssClass: 'bg-white w-[354px]',
+      errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4'
+    });
+    let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
+    let im = new Inputmask("+7 (999) 999-99-99");
+    im.mask(userphoneInput);
+    validateFeedbackForm.addField("#user-name", [{
+      rule: 'required',
+      errorMessage: 'Введите имя'
+    }, {
+      rule: 'customRegexp',
+      value: "[а-яё]",
+      errorMessage: 'Допустимы только кирилица'
+    }, {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Минимум 2 символа'
+    }, {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Максимум 30 символов'
+    }]).addField("#user-phone", [{
+      rule: 'required',
+      errorMessage: 'Это поле обязательно'
+    }, {
+      validator: (value, context) => {
+        return value.replace(/\D/g, '').length === 11;
+      },
+      errorMessage: 'Введите номер полностью'
+    }]);
   }
   ;
 });

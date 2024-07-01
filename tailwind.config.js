@@ -68,7 +68,7 @@ module.exports = {
       backgroundImage: {
         "link-arrow": "url('../img/small-right-arrow-ic.svg')",
         "tour-bg": "url('../img/tour-bg.png')",
-        "tours-tablet-bg": "url('../img/tours-tablet-bg.png')",
+        "tour-tablet-bg": "url('../img/tour-tablet-bg.png')",
         "small-cloud": "url('../img/small-cloud-decor.png')",
       },
       boxShadow: {

@@ -1376,14 +1376,14 @@ video {
   bottom: -5px;
 }
 
+.before\:bottom-\[-62\%\]::before {
+  content: var(--tw-content);
+  bottom: -62%;
+}
+
 .before\:bottom-\[-8px\]::before {
   content: var(--tw-content);
   bottom: -8px;
-}
-
-.before\:bottom-\[-95\%\]::before {
-  content: var(--tw-content);
-  bottom: -95%;
 }
 
 .before\:left-0::before {
@@ -1436,11 +1436,6 @@ video {
   display: block;
 }
 
-.before\:h-\[1240px\]::before {
-  content: var(--tw-content);
-  height: 1240px;
-}
-
 .before\:h-\[14px\]::before {
   content: var(--tw-content);
   height: 14px;
@@ -1454,6 +1449,11 @@ video {
 .before\:h-\[2px\]::before {
   content: var(--tw-content);
   height: 2px;
+}
+
+.before\:h-\[727px\]::before {
+  content: var(--tw-content);
+  height: 727px;
 }
 
 .before\:h-\[var\(--header-height\)\]::before {
@@ -1934,6 +1934,11 @@ video {
     padding-bottom: 1.75rem;
   }
 
+  .lg\:before\:bottom-\[-50\%\]::before {
+    content: var(--tw-content);
+    bottom: -50%;
+  }
+
   .lg\:after\:left-\[-110px\]::after {
     content: var(--tw-content);
     left: -110px;
@@ -2227,14 +2232,19 @@ video {
     top: 0.25rem;
   }
 
+  .md\:before\:bottom-\[-12\%\]::before {
+    content: var(--tw-content);
+    bottom: -12%;
+  }
+
   .md\:before\:hidden::before {
     content: var(--tw-content);
     display: none;
   }
 
-  .md\:before\:h-\[603px\]::before {
+  .md\:before\:h-\[354px\]::before {
     content: var(--tw-content);
-    height: 603px;
+    height: 354px;
   }
 
   .md\:before\:h-full::before {
@@ -2258,9 +2268,9 @@ video {
     background-color: rgb(217 231 234 / var(--tw-bg-opacity));
   }
 
-  .md\:before\:bg-tours-tablet-bg::before {
+  .md\:before\:bg-tour-tablet-bg::before {
     content: var(--tw-content);
-    background-image: url('../img/tours-tablet-bg.png');
+    background-image: url('../img/tour-tablet-bg.png');
   }
 
   .md\:before\:text-\[34px\]::before {
@@ -2470,6 +2480,11 @@ video {
   .xs\:before\:bottom-\[-20\%\]::before {
     content: var(--tw-content);
     bottom: -20%;
+  }
+
+  .xs\:before\:bottom-\[-7\%\]::before {
+    content: var(--tw-content);
+    bottom: -7%;
   }
 
   .xs\:after\:right-\[-50\%\]::after {

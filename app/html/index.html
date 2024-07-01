@@ -16,8 +16,8 @@
   <link rel="preload" fetchpriority="high" as="image" href="img/tour-bg.png" type="image/png">
   <link rel="preload" fetchpriority="high" as="image" href="img/tours-tablet-bg.png" type="image/png">
   <link rel="stylesheet" href="libs/css/aos.css">
-  <!-- <link rel="stylesheet" href="libs/css/baguetteBox.min.css">
-  <link rel="stylesheet" href="libs/css/splide.min.css"> -->
+  <link rel="stylesheet" href="libs/css/baguetteBox.min.css">
+  <link rel="stylesheet" href="libs/css/splide.min.css">
   <link rel="stylesheet" href="css/style.min.css" id="main-styles">
 </head>
 <body class="h-full font-sans overflow-x-hidden">
@@ -35,21 +35,16 @@
     @@include("parts/footer.html")
   </div>
   <script src="libs/js/rellax.min.js" defer></script>
-  <script src="libs/js/aos.js" defer></script>
+  <script src="libs/js/aos.js" id="important-lib"></script>
   <script src="libs/js/splide.min.js" defer></script>
   <script src="libs/js/baguetteBox.min.js" defer></script>
   <script src="libs/js/inputmask.min.js" defer></script>
   <script src="libs/js/just-validate.production.min.js" defer></script>
   <script>
-    let mainStyles = document.getElementById("main-styles");
-    function asyncCSS(url) {
-      let cssEl = document.createElement("link");
-      cssEl.rel = "stylesheet";
-      cssEl.href = url;
-      mainStyles.insertAdjacentElement("beforeBegin", cssEl);
-    }
-    asyncCSS("libs/css/baguetteBox.min.css");
-    asyncCSS("libs/css/splide.min.css");
+    AOS.init({
+      once: "true",
+    });
+
   </script>
   <script src="js/script.min.js" defer></script>
 </body>
