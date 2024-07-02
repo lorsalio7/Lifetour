@@ -1,6 +1,9 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    once: "true"
+  });
   // =========================== Фикс скачка браузерного скролла и плавной прокрутки ==========================================
 
   const scrollController = {
@@ -162,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gap: 20,
       perPage: 5,
       rewind: true,
-      // lazyLoad: true,
+      lazyLoad: true,
       mediaQuery: "max",
       breakpoints: {
         1024: {
@@ -206,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gap: 15,
       perPage: 3,
       rewind: true,
+      lazyLoad: true,
       mediaQuery: "max",
       breakpoints: {
         1024: {
