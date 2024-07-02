@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gap: 5,
       perPage: 5,
       rewind: true,
-      // lazyLoad: true,
+      lazyLoad: true,
       mediaQuery: "max",
       breakpoints: {
         768: {
