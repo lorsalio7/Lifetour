@@ -1137,6 +1137,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.opacity-5 {
+  opacity: 0.05;
+}
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2192,14 +2195,14 @@ video {
     left: -26px;
   }
 
+  .md\:before\:bottom-\[-12\%\]::before {
+    content: var(--tw-content);
+    bottom: -12%;
+  }
+
   .md\:before\:bottom-\[-13px\]::before {
     content: var(--tw-content);
     bottom: -13px;
-  }
-
-  .md\:before\:bottom-\[-30\%\]::before {
-    content: var(--tw-content);
-    bottom: -30%;
   }
 
   .md\:before\:bottom-\[-3px\]::before {
@@ -2230,11 +2233,6 @@ video {
   .md\:before\:top-1::before {
     content: var(--tw-content);
     top: 0.25rem;
-  }
-
-  .md\:before\:bottom-\[-12\%\]::before {
-    content: var(--tw-content);
-    bottom: -12%;
   }
 
   .md\:before\:hidden::before {
@@ -2475,11 +2473,6 @@ video {
 
   .xs\:text-\[20px\] {
     font-size: 20px;
-  }
-
-  .xs\:before\:bottom-\[-20\%\]::before {
-    content: var(--tw-content);
-    bottom: -20%;
   }
 
   .xs\:before\:bottom-\[-7\%\]::before {
