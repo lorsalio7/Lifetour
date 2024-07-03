@@ -26,8 +26,4 @@ if(gallery) {
   </svg>
   `;
 
-
-  // let closeGalleryButton = document.querySelector("#close-button");
-  // closeGalleryButton.classList.add("bg-science-blue");
-  // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
 }

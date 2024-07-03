@@ -290,10 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#previous-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
     document.querySelector("#previous-button").innerHTML = "";
     document.querySelector("#previous-button").innerHTML = "\n  <svg width=\"14\" height=\"8\" id=\"left-arrow\" viewBox=\"0 0 14 8\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.578.464.396 3.646a.5.5 0 0 0 0 .708l3.182 3.182a.5.5 0 1 0 .708-.708L1.957 4.5H13.75v-1H1.957l2.329-2.328a.5.5 0 1 0-.708-.708Z\" fill=\"#fff\" />\n  </svg>\n  ";
-
-    // let closeGalleryButton = document.querySelector("#close-button");
-    // closeGalleryButton.classList.add("bg-science-blue");
-    // document.querySelector("#close-button svg").classList.add("w-4", "h-4", "top-1/2", "left-1/2", "block");
   }
   ;
   const feedbackForm = document.querySelector(".feedback-form");
