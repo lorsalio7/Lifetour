@@ -12,3 +12,4 @@
 - [RELLAX.js](https://dixonandmoe.com/rellax/) - Плагин параллакс эффекта. Автор - **Dixon & Moe**
 - [Splide.js](https://dixonandmoe.com/rellax/) - Плагин слайдера. Автор - **Naotoshi Fujita**
 - [Tailwind CSS](https://dixonandmoe.com/rellax/) - CSS Framework. Автор - **Tailwind Labs**
+- [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) - Полифилл для SVG. Автор - **Jonathan Neal**
