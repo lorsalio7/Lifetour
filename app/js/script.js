@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     once: "true",
   });
+  svg4everybody({
+    polyfill: true
+  });
   @@include("functions/scroll-controller.js");
   @@include("parts/scroll-top.js");
   @@include("parts/header-height.js");

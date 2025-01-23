@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-white: rgb(255,255,255);
+    --color-black: rgb(0,0,0);
+    --color-black-0: rgba(0,0,0,0);
+    --color-white-20: rgba(255,255,255,0.2);
+    --color-science-blue: rgb(2,102,193);
+    --color-science-blue-40: rgba(2,102,193,0.4);
+    --color-science-blue-11: rgba(2,102,193,0.11);
+    --color-black-squeeze: rgb(245,249,252);
+    --color-endeavour: rgb(0,83,158);
+    --color-outer-space: rgb(45,56,63);
+    --color-outer-space-40: rgba(45,56,63,0.4);
+    --color-mystic: rgb(217,231,234);
+    --color-silver-chalice: rgb(176,176,176);
+  }
+}
+
 @font-face {
   src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-family: "Montserrat";

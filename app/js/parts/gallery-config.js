@@ -3,14 +3,14 @@ let gallery = document.querySelector(".gallery");
 
 if(gallery) {
   baguetteBox.run('.gallery');
-  document.querySelector("#close-button").classList.add("hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+  document.querySelector("#close-button").classList.add("hover-hover:hover:bg-[var(--color-endeavour)]", "focus:bg-[var(--color-endeavour)]");
   document.querySelector("#close-button svg").setAttribute("viewBox", "0 0 30 30");
   document.querySelector("#close-button svg").setAttribute("width", "20");
   document.querySelector("#close-button svg").setAttribute("height", "20");
   document.querySelector("#close-button svg").setAttribute("preserveAspectRatio", "xMidYMid meet");
   document.querySelector("#close-button svg").setAttribute("xmlns", "http://www.w3.org/2000/svg");
 
-  document.querySelector("#next-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+  document.querySelector("#next-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-[var(--color-endeavour)]", "focus:bg-[var(--color-endeavour)]");
   document.querySelector("#next-button").innerHTML = "";
   document.querySelector("#next-button").innerHTML = `
   <svg width="14" height="8" id="right-arrow" viewBox="0 0 14 8">
@@ -18,7 +18,7 @@ if(gallery) {
   </svg>
   `;
 
-  document.querySelector("#previous-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-endeavour", "focus:bg-endeavour");
+  document.querySelector("#previous-button").classList.add("flex", "justify-center", "items-center", "hover-hover:hover:bg-[var(--color-endeavour)]", "focus:bg-[var(--color-endeavour)]");
   document.querySelector("#previous-button").innerHTML = "";
   document.querySelector("#previous-button").innerHTML = `
   <svg width="14" height="8" id="left-arrow" viewBox="0 0 14 8">

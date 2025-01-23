@@ -29,8 +29,8 @@ if(burgerButton) {
     setTimeout(()=> {
       scrollController.disabledScroll();
     },300);
-    burgerButtonLine.className = "burger-button-line absolute left-1/2 top-1/2 block w-[34px] h-[2px] -translate-x-1/2 -translate-y-1/2 transition-colors duration-300 delay-300 ease-linear bg-transparent before:content-[''] before:absolute before:block before:w-[34px] before:h-[2px] before:bg-white before:left-0 before:top-0 before:rotate-45 before:transition-[top,transform] before:duration-[0.3s,0.3s] before:delay-[0s,0.3s] before:ease-[linear,linear] after:content-[''] after:absolute after:left-0 after:top-0 after:-rotate-45 after:block after:w-[34px] after:h-[2px] after:bg-white after:transition-[top,transform] after:duration-[0.3s,0.3s] after:delay-[0s,0.3s] after:ease-linear";
-    siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:translate-x-0 md:justify-start md:py-[86px] md:items-center";
+    burgerButtonLine.className = "burger-button-line absolute left-1/2 top-1/2 block w-[34px] h-[2px] -translate-x-1/2 -translate-y-1/2 transition-colors duration-300 delay-300 ease-linear bg-transparent before:content-[''] before:absolute before:block before:w-[34px] before:h-[2px] before:bg-[var(--color-white)] before:left-0 before:top-0 before:rotate-45 before:transition-[top,transform] before:duration-[0.3s,0.3s] before:delay-[0s,0.3s] before:ease-[linear,linear] after:content-[''] after:absolute after:left-0 after:top-0 after:-rotate-45 after:block after:w-[34px] after:h-[2px] after:bg-[var(--color-white)] after:transition-[top,transform] after:duration-[0.3s,0.3s] after:delay-[0s,0.3s] after:ease-linear";
+    siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-[var(--color-science-blue)] md:w-full md:transition-transform md:duration-300 md:ease-linear md:translate-x-0 md:justify-start md:py-[86px] md:items-center";
   }
 
   function closeSiteMenu() {
@@ -38,7 +38,7 @@ if(burgerButton) {
 
     burgerButton.classList.remove("burger-button--active");
     burgerButtonLine.className = burgerButtonLineClassList;
-    siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-science-blue md:w-full md:transition-transform md:duration-300 md:ease-linear md:-translate-x-[100%] md:justify-start md:py-[86px] md:items-center";
+    siteNavigation.className = "site-navigation flex justify-between md:fixed md:top-0 md:bottom-0 md:right-0 md:h-full md:overflow-y-auto md:flex-col md:bg-[var(--color-science-blue)] md:w-full md:transition-transform md:duration-300 md:ease-linear md:-translate-x-[100%] md:justify-start md:py-[86px] md:items-center";
   }
 
   function changeMenuView(width) {

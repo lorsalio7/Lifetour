@@ -2,8 +2,8 @@ const feedbackForm = document.querySelector(".feedback-form");
 
 if(feedbackForm) {
   let validateFeedbackForm = new window.JustValidate(feedbackForm, {
-    errorFieldCssClass: 'bg-white w-[354px]',
-    errorLabelCssClass: 'bg-white w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4',
+    errorFieldCssClass: 'bg-[var(--color-white)] w-[354px]',
+    errorLabelCssClass: 'bg-[var(--color-white)] w-full px-2 text-[14px] absolute -bottom-6 lg:-bottom-4',
   });
   let userphoneInput = feedbackForm.querySelector(".feedback-user-phone");
   let im = new Inputmask("+7 (999) 999-99-99");

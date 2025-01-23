@@ -15,6 +15,7 @@ const babel = require("gulp-babel");
 const webp = require("gulp-webp");
 const pngquant = require("imagemin-pngquant");
 const imagemin = require("gulp-imagemin");
+const postcss_color = require("postcss-color-function");
 const uglify = require("gulp-uglify-es").default;
 
 function browserSync() {
@@ -39,7 +40,13 @@ function html() {
 
 function css() {
   return src("app/css/style.css")
-  .pipe(postcss([tailwindcss, auto_prefixer({cascade: true})]))
+  .pipe(postcss([
+    tailwindcss,
+    postcss_color({preserveCustomProps: false}),
+    auto_prefixer({
+      cascade: true
+    })
+  ]))
   .pipe(dest("dist/css/"))
   .pipe(clean_css())
   .pipe(rename({

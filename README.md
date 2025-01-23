@@ -11,3 +11,4 @@
 - [Just-Validate.js](https://just-validate.dev) - Плагин валидации инпутов. Автор - **Georgii Perepecho**
 - [RELLAX.js](https://dixonandmoe.com/rellax/) - Плагин параллакс эффекта. Автор - **Dixon & Moe**
 - [Splide.js](https://dixonandmoe.com/rellax/) - Плагин слайдера. Автор - **Naotoshi Fujita**
+- [Tailwind CSS](https://dixonandmoe.com/rellax/) - CSS Framework. Автор - **Tailwind Labs**
